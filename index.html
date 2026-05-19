@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // แก้ไขลิงก์ของคุณในเครื่องหมายคำพูดด้านล่างนี้
+            var iosUrl = "https://apps.apple.com/th/app/acharge/id6751375758"; 
+            var androidUrl = "https://play.google.com/store/apps/details?id=com.evota.acharge"; 
+            var defaultUrl = "https://www.facebook.com/groups/1635806167472936/user/61566104595021/"; 
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = iosUrl;
+            } else if (/android/i.test(userAgent)) {
+                window.location.href = androidUrl;
+            } else {
+                window.location.href = defaultUrl;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p style="text-align: center; font-family: kanit,sans-serif; margin-top: 50px;"><b>
+        กำลังนำท่านไปยังหน้าดาวน์โหลดแอปพลิเคชัน...
+  </b>
+    </p>
+</body>
+</html>
